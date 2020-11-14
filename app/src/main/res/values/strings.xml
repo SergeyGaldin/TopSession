@@ -1,0 +1,26 @@
+<resources>
+    <string name="app_name">TopSession</string>
+
+    <!--Главный экран-->
+    <string name="name_bank">WorldSkills Bank</string>
+    <string name="name_branch">Отделения и банкоматы</string>
+    <string name="name_course">Курсы валют</string>
+    <string name="name_come">ВОЙТИ</string>
+    <string name="name_usd">USD</string>
+    <string name="name_eur">EUR</string>
+
+    <string name="Buy">Покупка</string>
+    <string name="Sell">Продажа</string>
+
+    <string name="name_alert">Авторизация</string>
+    <string name="name_ed">Введите Ваш логин и пароль</string>
+    <string name="add">Добавить</string>
+    <string name="cancel">Отменить</string>
+    <string name="hint_login">Логин</string>
+    <string name="hint_password">Пароль</string>
+
+    <string name="text_home">Главный</string>
+    <string name="text_pay">Платяжи</string>
+    <string name="text_history">Истроия</string>
+    <string name="text_message">Диалоги</string>
+</resources>

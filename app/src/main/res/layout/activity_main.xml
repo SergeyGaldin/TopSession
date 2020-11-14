@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/bg_gradient"
+    android:orientation="vertical"
+    tools:context=".MainActivity">
+
+    <RelativeLayout
+        android:id="@+id/name_bank"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="50dp">
+
+        <ImageView
+            android:id="@+id/img_museum"
+            android:layout_width="75dp"
+            android:layout_height="75dp"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentTop="true"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="30dp"
+            android:src="@drawable/museum" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginStart="15dp"
+            android:layout_toEndOf="@+id/img_museum"
+            android:text="@string/name_bank"
+            android:textColor="@color/myPurple"
+            android:textSize="35sp"
+            android:textStyle="italic" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/name_bank"
+        android:layout_marginTop="30dp">
+
+        <RelativeLayout
+            android:id="@+id/relBranch"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <ImageButton
+                android:id="@+id/branches"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_alignParentTop="true"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/but_circle"
+                android:onClick="onClickBranch" />
+
+            <ImageView
+                android:id="@+id/imgKlych"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:src="@drawable/klych" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="20dp"
+                android:layout_toEndOf="@+id/imgKlych"
+                android:text="@string/name_branch"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relCourse"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relBranch"
+            android:layout_marginTop="25dp">
+
+            <ImageButton
+                android:id="@+id/course"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/but_circle"
+                android:onClick="onClickCourse" />
+
+            <ImageView
+                android:id="@+id/imgDollar"
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:layout_alignStart="@+id/course"
+                android:layout_alignTop="@+id/course"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="10dp"
+                android:src="@drawable/dollar" />
+
+            <TextView
+                android:id="@+id/textCourse"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/course"
+                android:layout_marginStart="20dp"
+                android:layout_marginTop="20dp"
+                android:layout_toEndOf="@+id/imgDollar"
+                android:text="@string/name_course"
+                android:textColor="@color/black"
+                android:textSize="22sp" />
+
+            <TextView
+                android:id="@+id/data_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/course"
+                android:layout_alignEnd="@id/course"
+                android:layout_marginTop="20dp"
+                android:layout_marginEnd="14dp"
+                android:textColor="#707070"
+                android:textSize="15sp" />
+
+            <TextView
+                android:id="@+id/textUSD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignStart="@id/course"
+                android:layout_alignBottom="@id/course"
+                android:layout_marginStart="40dp"
+                android:layout_marginBottom="15dp"
+                android:text="@string/name_usd"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/parsUSD"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/course"
+                android:layout_marginStart="5dp"
+                android:layout_marginBottom="16dp"
+                android:layout_toEndOf="@id/textUSD" />
+
+            <TextView
+                android:id="@+id/textEUR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignBottom="@id/course"
+                android:layout_marginEnd="5dp"
+                android:layout_marginBottom="15dp"
+                android:layout_toStartOf="@id/parsEUR"
+                android:text="@string/name_eur"
+                android:textColor="@color/black"
+                android:textSize="18sp" />
+
+            <TextView
+                android:id="@+id/parsEUR"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignEnd="@id/course"
+                android:layout_alignBottom="@id/course"
+                android:layout_marginEnd="40dp"
+                android:layout_marginBottom="16dp" />
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/relCome"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/relCourse"
+            android:layout_marginTop="60dp">
+
+            <ImageButton
+                android:id="@+id/come"
+                android:layout_width="match_parent"
+                android:layout_height="120dp"
+                android:layout_marginStart="7dp"
+                android:layout_marginEnd="5dp"
+                android:background="@drawable/but_circle_blue"
+                android:onClick="onClickHome" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="@string/name_come"
+                android:textColor="@color/white"
+                android:textSize="22sp" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>
